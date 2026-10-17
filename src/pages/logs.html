@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Logs | Smart Parcel DropBox</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Smart Parcel DropBox</h2>
+
+            <p class="sidebar-label">ADMIN MENU</p>
+
+            <nav>
+                <a href="admin.html" class="menu-link">Dashboard</a>
+                <a href="access-logs.html" class="menu-link active">Access Logs</a>
+                <a href="deliveries.html" class="menu-link">Deliveries</a>
+            </nav>
+
+            <a href="login.html" class="logout-btn">Log Out</a>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <h1>Access Logs</h1>
+                    <p>Review RFID scans and locker access attempts.</p>
+                </div>
+
+                <span class="admin-label">Administrator</span>
+            </header>
+
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>RFID Access History</h2>
+                        <p>Check whether each tag scan was accepted or denied.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RFID Tag</th>
+                                <th>Result</th>
+                                <th>Date and Time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td colspan="3">No access records yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="card-note">
+                    Access logs will appear here after RFID scan events
+                    are recorded by your backend.
+                </p>
+            </section>
+
+            <footer>
+                Smart Parcel DropBox · Admin Panel
+            </footer>
+
+        </main>
+    </div>
+</body>
+</html>

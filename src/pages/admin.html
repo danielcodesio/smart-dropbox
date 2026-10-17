@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Smart Parcel DropBox</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Smart Parcel DropBox</h2>
+
+            <p class="sidebar-label">ADMIN MENU</p>
+
+            <nav>
+                <a href="admin.html" class="menu-link active">
+                    Dashboard
+                </a>
+
+                <a href="logs.html" class="menu-link">
+                    Access Logs
+                </a>
+
+                <a href="deliveries.html" class="menu-link">
+                    Deliveries
+                </a>
+            </nav>
+
+            <a href="login.html" class="logout-btn">Log Out</a>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Monitor your locker and parcel activity.</p>
+                </div>
+
+                <span class="admin-label">Administrator</span>
+            </header>
+
+            <section class="overview-grid">
+
+                <article class="overview-card">
+                    <p class="card-label">LOCKER STATUS</p>
+                    <h2 class="status-text status-locked">Locked</h2>
+                    <p class="card-description">Current lock state</p>
+                </article>
+
+                <article class="overview-card">
+                    <p class="card-label">LOCKER OCCUPANCY</p>
+                    <h2 class="status-text status-empty">Empty</h2>
+                    <p class="card-description">Detected parcel presence</p>
+                </article>
+
+                <article class="overview-card">
+                    <p class="card-label">TOTAL USERS</p>
+                    <h2 class="status-text">0</h2>
+                    <p class="card-description">Registered users</p>
+                </article>
+
+            </section>
+
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Locker Overview</h2>
+                        <p>Current state of your Smart Parcel DropBox.</p>
+                    </div>
+                </div>
+
+                <div class="locker-details">
+
+                    <div class="detail-row">
+                        <span>Lock Status</span>
+                        <strong>Locked</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Occupancy</span>
+                        <strong>Empty</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Controller</span>
+                        <strong>ESP32</strong>
+                    </div>
+
+                </div>
+
+                <p class="card-note">
+                    These values are placeholders until connected to the
+                    ESP32 and backend.
+                </p>
+            </section>
+
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent RFID Access Logs</h2>
+                        <p>Review recent tag scans and their results.</p>
+                    </div>
+
+                    <a href="logs.html" class="action-link">
+                        View All Logs
+                    </a>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RFID Tag</th>
+                                <th>Result</th>
+                                <th>Date and Time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>No records yet</td>
+                                <td>
+                                    <span class="result-badge result-pending">
+                                        Awaiting data
+                                    </span>
+                                </td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer>
+                Smart Parcel DropBox · Admin Panel
+            </footer>
+
+        </main>
+    </div>
+</body>
+</html>

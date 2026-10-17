@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Status | Smart Parcel DropBox</title>
+    <link rel="stylesheet" href="../styles/user.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Smart Parcel DropBox</h2>
+
+            <p class="sidebar-label">USER MENU</p>
+
+            <nav>
+                <a href="user.html" class="menu-link">Dashboard</a>
+                <a href="notification.html" class="menu-link">Notifications</a>
+                <a href="status.html" class="menu-link active">Parcel Status</a>
+            </nav>
+
+            <a href="login.html" class="logout-btn">Log Out</a>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="page-header">
+                <h1>Parcel Status</h1>
+                <p>View the current status of your parcel.</p>
+            </header>
+
+            <section class="content-card">
+                <span class="card-label">YOUR PARCEL</span>
+                <h2>Parcel Overview</h2>
+
+                <div class="status-row">
+                    <span class="card-label">Parcel Status</span>
+                    <span class="status-badge status-pending">
+                        Awaiting Parcel
+                    </span>
+                </div>
+
+                <div class="status-row">
+                    <span class="card-label">DropBox Status</span>
+                    <span class="status-badge status-locked">
+                        Locked
+                    </span>
+                </div>
+
+                <div class="status-row">
+                    <span class="card-label">DropBox Occupancy</span>
+                    <span class="status-badge status-empty">
+                        Empty
+                    </span>
+                </div>
+
+                <div class="card-note">
+                    Status values shown here are placeholders.
+                    Live updates require integration with the system.
+                </div>
+            </section>
+
+            <footer>Smart Parcel DropBox</footer>
+
+        </main>
+    </div>
+</body>
+</html>

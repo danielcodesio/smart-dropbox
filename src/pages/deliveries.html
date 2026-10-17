@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliveries | Smart Parcel DropBox</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Smart Parcel DropBox</h2>
+
+            <p class="sidebar-label">ADMIN MENU</p>
+
+            <nav>
+                <a href="admin.html" class="menu-link">Dashboard</a>
+                <a href="logs.html" class="menu-link">Access Logs</a>
+                <a href="deliveries.html" class="menu-link active">Deliveries</a>
+            </nav>
+
+            <a href="login.html" class="logout-btn">Log Out</a>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="page-header">
+                <div>
+                    <h1>Deliveries</h1>
+                    <p>Register a parcel and assign it to a user.</p>
+                </div>
+
+                <span class="admin-label">Administrator</span>
+            </header>
+
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Register a Delivery</h2>
+                        <p>Enter the parcel details below.</p>
+                    </div>
+                </div>
+
+                <form id="delivery-form">
+
+                    <div class="form-group">
+                        <label for="recipient">Parcel Recipient</label>
+
+                        <input
+                            type="text"
+                            id="recipient"
+                            name="recipient"
+                            list="user-accounts"
+                            placeholder="Start typing a user's name"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <datalist id="user-accounts">
+                            
+                            <option value="Daniel Santos"></option>
+                            <option value="Alex Reyes"></option>
+                            <option value="Jamie Cruz"></option>
+                        </datalist>
+
+                        <small>
+                            Start typing to see matching account suggestions.
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parcel-description">Parcel Description</label>
+
+                        <input
+                            type="text"
+                            id="parcel-description"
+                            name="parcel-description"
+                            placeholder="Enter parcel details"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes (Optional)</label>
+
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="4"
+                            placeholder="Enter any additional information"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Register Delivery
+                    </button>
+
+                    <p id="form-message" class="form-message" role="status"></p>
+
+                </form>
+            </section>
+
+            <section class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Delivery Records</h2>
+                        <p>Registered parcels will be listed here once connected to your backend.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recipient</th>
+                                <th>Parcel</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td colspan="3">No delivery records yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer>
+                Smart Parcel DropBox · Admin Panel
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        const deliveryForm = document.getElementById("delivery-form");
+        const formMessage = document.getElementById("form-message");
+
+        deliveryForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            formMessage.textContent =
+                "The form is ready, but saving deliveries requires backend integration.";
+
+            formMessage.className = "form-message";
+        });
+    </script>
+</body>
+</html>
