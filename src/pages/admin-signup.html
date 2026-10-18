@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Signup | Smart Parcel DropBox</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+</head>
+
+<body>
+    <main class="auth-container">
+
+        <header class="auth-header">
+            <h1>Smart Parcel Locker</h1>
+            <p>Admin account registration</p>
+        </header>
+
+        <section class="auth-card">
+            <h2>Create Admin Account</h2>
+            <p class="description">Fill in your admin details below.</p>
+
+            <form id="form">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose an admin username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-container">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            maxlength="16"
+                            required
+                        >
+
+                        <button type="button" id="toggle-btn">Show</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Re-enter your password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <p id="error-msg">
+                        <span>
+                            <img
+                                src="../assets/warning-outline-rounded.svg"
+                                alt="Warning icon"
+                            >
+                        </span>
+                        Passwords do not match.
+                    </p>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit">
+                    Create Admin Account
+                </button>
+            </form>
+
+            <p class="footer-text">
+                Return to <a href="login.html">Login</a>
+            </p>
+        </section>
+
+        <div id="popup-container">
+            <div id="popup-message">
+                <p id="success-message">Admin Account Created!</p>
+                <p>
+                    Back to <a href="login.html">Login</a>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="../javascript/admin-signup.js"></script>
+</body>
+
+</html>
